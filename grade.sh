@@ -28,6 +28,8 @@ if [ $? -eq 0 ]; then
     echo Success
 else
     echo Failure
+    grep -oE "Tests run: [0-9]+" junitOutput.txt 
+    grep -oE "Failures: [0-9]+" junitOutput.txt 
 fi
 # Draw a picture/take notes on the directory structure that's set up after
 # getting to this point
